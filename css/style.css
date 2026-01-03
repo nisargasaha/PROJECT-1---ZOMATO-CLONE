@@ -1,5 +1,5 @@
-/* Reset and base styles */
-* {
+
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,7 +32,7 @@ img {
     height: auto;
 }
 
-/* Main Header */
+
 .main-header {
     background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
     position: sticky;
@@ -45,7 +45,7 @@ img {
     -webkit-backdrop-filter: blur(30px);
 }
 
-/* Change logo image color to red */
+
 .logo img {
     filter: invert(26%) sepia(90%) saturate(7479%) hue-rotate(357deg) brightness(98%) contrast(103%);
 }
@@ -126,7 +126,7 @@ img {
     cursor: pointer;
 }
 
-/* Hero Section */
+
 .hero-section {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
     background-size: cover;
@@ -159,7 +159,7 @@ img {
     line-height: 1.2;
 }
 
-/* Search Bar */
+
 .search-container {
     display: flex;
     background-color: #fff;
@@ -329,7 +329,7 @@ img {
     color: #cb202d;
 }
 
-/* Get The App Section */
+
 .get-app {
     padding: 80px 0;
     background-color: #f8f9fa;
@@ -429,7 +429,7 @@ img {
     height: 50px;
 }
 
-/* Footer */
+
 .main-footer {
     background-color: #333;
     color: #fff;
@@ -510,7 +510,6 @@ img {
     line-height: 1.6;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .header-wrapper {
         justify-content: space-between;
