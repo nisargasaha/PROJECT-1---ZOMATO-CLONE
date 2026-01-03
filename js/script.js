@@ -1,5 +1,5 @@
 11document.addEventListener('DOMContentLoaded', function() {
-    // Navbar scroll effect
+    
     function handleScroll() {
         const header = document.querySelector('.main-header');
         if (window.scrollY > 50) {
@@ -10,7 +10,7 @@
     }
     window.addEventListener('scroll', handleScroll);
 
-    // Mobile menu functionality
+    
     const mobileMenuBtn = document.querySelector('.mobile-nav i');
     const nav = document.querySelector('.desktop-nav');
 
@@ -21,7 +21,7 @@
             mobileMenuBtn.classList.toggle('fa-times');
         });
 
-        // Close menu when clicking outside or on a link
+        
         document.addEventListener('click', function(e) {
             if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                 nav.classList.remove('active');
@@ -30,7 +30,7 @@
             }
         });
 
-        // Close menu when clicking on a navigation link
+        
         const navLinks = nav.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -41,7 +41,7 @@
         });
     }
 
-    // Search functionality
+    
     const searchForm = document.querySelector('.search-container');
     const locationInput = document.getElementById('location-input');
     const restaurantInput = document.getElementById('restaurant-input');
@@ -86,13 +86,12 @@
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         }
 
-        // Function to validate phone number
+        
         function isValidPhone(phone) {
             return /^\d{10}$/.test(phone);
         }
 
-        // Update input type and placeholder based on selection
-        function updateInputType() {
+         updateInputType() {
             const isEmail = emailRadio.checked;
             appLinkInput.type = isEmail ? 'email' : 'tel';
             appLinkInput.placeholder = isEmail ? 'Enter your email' : 'Enter your phone number';
@@ -102,7 +101,7 @@
         emailRadio.addEventListener('change', updateInputType);
         phoneRadio.addEventListener('change', updateInputType);
 
-        // Form submission handler
+        
         appLinkForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const inputValue = appLinkInput.value.trim();
@@ -119,12 +118,12 @@
                 return;
             }
 
-            // Success case
+            
             formMessage.textContent = 'App link sent successfully!';
             formMessage.style.color = 'green';
             appLinkInput.value = '';
         });
     }
 
-    // Card hover effects are handled by CSS
+    
 });
